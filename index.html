@@ -175,6 +175,7 @@
 
     //NOTEPAD FUNCTIONALITY
     const notepad = document.getElementById('notepad');
+    notepad.value = localStorage.getItem('notepadContent') || "";
     notepad.addEventListener('input', () => {
         localStorage.setItem('notepadContent', notepad.value);
     });
